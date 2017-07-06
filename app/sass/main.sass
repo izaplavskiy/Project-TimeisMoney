@@ -1,0 +1,349 @@
+@font-face
+  font-family: OpenSans Semibold
+  src: url(../fonts/OpenSans-Semibold.ttf) 
+
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, em, 
+img, ol, ul, li, fieldset, form, label, legend, table, tbody, 
+tfoot, thead, tr, th, td, article, aside, footer, header, menu, 
+nav, output, section
+  margin: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+html
+  height: 100%
+
+body
+  height: 100%
+  font: 14px/16px 'Open Sans', sans-serif
+  color: #000
+  background: #fff
+
+ol, ul
+  list-style: none
+
+*
+  padding: 0
+  margin: 0
+  outline: none
+  box-sizing: border-box
+
+a
+  color: #000
+  text-decoration: none
+
+  &:hover
+    text-decoration: none
+
+.center
+  max-width: 92%
+  margin: 0 auto
+
+.wrapper
+  height: 100%
+  height: auto !important
+  min-height: 100%
+
+  header
+    .wrap-header
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      align-items: center
+      min-height: 100px
+
+      .logo
+        align-self: center
+      
+        a
+          font-family: 'Lobster', cursive
+          font-size: 3.2em
+          color: #44c0c2
+
+      nav
+        align-self: center
+
+        .header-links
+          display: flex
+          justify-content: center
+          flex-direction: row
+
+          li
+            a
+              font-family: 'Open Sans', sans-serif
+              font-size: 1.1em
+              padding: 39px 20px 36px
+
+              &:hover
+                background: #f8f9fb
+                border-bottom: 3px solid #49cbcd
+
+
+
+
+.home-bg
+  position: relative
+  min-height: 560px
+  background: #49cbcd url(../img/home-bg.jpg) no-repeat
+  background-size: cover
+  text-align: center
+  
+  .home--pointer-right
+    display: inline-block
+    position: absolute
+    width: 51px
+    height: 51px
+    top: 50%
+    right: 2%
+    background: url(../img/right-pointer.png) no-repeat
+    z-index: 99
+    cursor: pointer
+
+  .home--pointer-left
+    display: inline-block
+    position: absolute
+    width: 51px
+    height: 51px
+    top: 50%
+    left: 2%
+    background: url(../img/left-pointer.png) no-repeat
+    z-index: 99
+    cursor: pointer
+
+  h1
+    height: auto
+    padding-top: 13%
+    font-family: "OpenSans Semibold"
+    text-align: center
+    font-size: 4.5em
+    color: #fff
+    line-height: 1.0em
+
+  h3
+    padding-top: 5%
+    font-family: 'Open Sans', sans-serif
+    font-size: 1.6em
+    text-align: center
+    line-height: 2.0em
+    color: #fff
+
+  .home-btn
+    display: inline-block
+    padding: 1% 3%
+    margin-top: 5%
+    border-radius: 5px
+    background: none
+    border: 2px solid #fff
+    text-align: center
+    font: 1.7em OpenSans Semibold, sans-serif
+    text-transform: capitalize
+    color: #fff
+    cursor: pointer
+
+    &:hover
+      border: 2px solid #49cbcd
+      color: #49cbcd
+
+
+.title
+  padding: 10% 0
+  font-family: 'Open Sans', sans-serif
+  font-size: 3em
+  color: #4e525d
+  text-transform: capitalize
+  text-align: center
+  min-height: 100%
+
+#team 
+  background: #fff
+  min-height: 800px
+  padding-bottom: 5%
+
+  .team--wrap
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+
+
+    .team--wrap-item
+      padding: 5% 1%
+      max-width: 288px
+      text-align: center
+
+      .circle
+        position: relative
+        display: inline-block
+        height: 200px
+        width: 200px
+        background: #eeeef0
+        border-radius: 50%
+
+        &:hover
+          cursor: pointer
+        
+        .zoom
+          display: inline-block
+          position: absolute
+          top: 41%
+          right: 34%
+          font-size: 8em
+          font-weight: 800
+          color: #f46d6d
+          // display: none
+
+      img
+        max-width: 100%
+        
+      h3
+        padding-top: 27%
+        font-size: 1.4em
+        line-height: 1.4em
+        color: #4e525d
+        text-transform: capitalize
+
+      span
+        display: block
+        padding-top: 4%
+        text-transform: capitalize
+        color: #4e525d
+        font-size: 0.9em
+
+      p
+        padding: 12% 2%
+        color: #4e525d
+        line-height: 2em
+        font-size: 0.9em
+
+
+#services
+  min-height: 740px
+  background: #f1f1f1
+  padding: 9% 0
+
+  .services-wrap
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+    
+    .services--item
+      margin: 4% 0 0 2%
+      width: 370px
+      text-align: center
+      border-radius: 3px
+      background: #f8f9fb
+
+      &:first-child
+        margin-left: 0
+
+      .services--item-title
+        padding: 8% 0
+        background: #485460
+        font-size: 1.6em
+        color: #fff
+        border-radius: 2px
+
+      .services--item-price
+        padding: 8% 0
+        font-size: 1.3em
+        color: #485460
+
+      .services--item-service li
+        padding: 4.1% 0
+        background: #fff
+        border: 0.5px solid #ecf0f1
+        color: #8c9299
+
+      .services--item-btn
+        display: inline-block
+        margin: 9% 0
+        padding: 3% 15%
+        background: #788492
+        font-size: 1.2em
+        color: #fff
+        font-weight: 600
+        border-radius: 4px
+        border: 1 px solid #788492
+        
+
+
+
+
+@media screen and (max-width: 768px) 
+  .wrapper header .wrap-header
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+    .logo
+      padding-top: 3%
+
+    nav .header-links li
+      padding: 3%
+
+      a
+        padding: 13%
+
+  #services .services-wrap
+    .services--item
+      margin-left: 0 
+
+@media screen and (max-width: 480px)
+
+  body
+    font-size: 65%
+
+  .wrapper header .wrap-header
+    display: block
+    min-height: 100%
+    max-width: 100%
+    text-align: center
+    padding: 5% 
+
+    .logo
+      font-size: 0.7em
+
+    nav .header-links
+      display: flex
+      flex-direction: column
+
+      li
+        padding: 5%
+
+        a
+          padding: 2%
+
+  #home 
+    .home--pointer-right
+      background: url(../img/right-pointer-small.png) no-repeat
+      width: 30px
+      height: 30px
+
+    .home--pointer-left
+      background: url(../img/left-pointer-small.png) no-repeat
+      width: 30px
+      height: 30px
+             
+  .home-bg 
+    font-size: 60%
+    background: #49cbcd url(../img/home-bg-small.jpg) no-repeat
+    min-height: 300px
+
+    
+    h3
+      margin-top: 3%
+
+    .home-btn
+      margin-top: 20%
+
+  .title
+    font-size: 2.5em
+    line-height: 1.5em
+         
+    
+
+
+
