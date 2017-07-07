@@ -1,13 +1,13 @@
-var gulp = require('gulp'),
-	sass = require('gulp-sass'),
-	browserSync = require('browser-sync'),
-	BSreload = browserSync.reload,
-	concat = require('gulp-concat'),
-	del = require('del'),
+var gulp         = require('gulp'),
+	sass         = require('gulp-sass'),
+	browserSync  = require('browser-sync'),
+	BSreload     = browserSync.reload,
+	concat       = require('gulp-concat'),
+	del          = require('del'),
 	autoprefixer = require('gulp-autoprefixer'),
-	imagemin = require('gulp-imagemin'),
-	pngquant = require('imagemin-pngquant'),
-	cache = require('gulp-cache');
+	imagemin     = require('gulp-imagemin'),
+	pngquant     = require('imagemin-pngquant'),
+	cache        = require('gulp-cache');
 
 
 gulp.task('sass', function() {
