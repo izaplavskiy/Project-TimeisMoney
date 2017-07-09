@@ -7,6 +7,7 @@
 	<link rel='stylesheet' href='css/main.css'>
 	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+    <script src='libs/jquery/dist/jquery.js'></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -58,29 +59,29 @@
 					<div class="title">The team</div>
 					<div class="team--wrap">
 						<div class="team--wrap-item">
-							<div class="circle"><span class="zoom">+</span></div>
+							<div class="team--wrap-item-photo"><span class="zoom">+</span></div>
 							<!-- <img src="../img/team-photo.png"  alt="Adrian Thomas"> -->
 							<h3>Adrian Thomas</h3>
-							<span>CEO & Founder</span>
+							<span>CEO &amp; Founder</span>
 							<p>Lorem Ipsum is simply dummy text of the printing 
 							and typesetting industry. Lorem Ipsum has been</p>
 						</div>
 						<div class="team--wrap-item">
-							<div class="circle"><span class="zoom">+</span></div>
+							<div class="team--wrap-item-photo"><span class="zoom">+</span></div>
 							<h3>Narate Ketram</h3>
 							<span>Creative Director</span>
 							<p>Lorem Ipsum is simply dummy text of the printing 
 							and typesetting industry. Lorem Ipsum has been</p>
 						</div>
 						<div class="team--wrap-item">
-							<div class="circle"><span class="zoom">+</span></div>
+							<div class="team--wrap-item-photo"><span class="zoom">+</span></div>
 							<h3>Fernando Comet</h3>
-							<span>CEO & Founder</span>
+							<span>CEO &amp; Founder</span>
 							<p>Lorem Ipsum is simply dummy text of the printing 
 							and typesetting industry. Lorem Ipsum has been</p>
 						</div>
 						<div class="team--wrap-item">
-							<div class="circle"><span class="zoom">+</span></div>
+							<div class="team--wrap-item-photo"><span class="zoom">+</span></div>
 							<h3>Adedayo Saheed</h3>
 							<span>Creative Director</span>
 							<p>Lorem Ipsum is simply dummy text of the printing 
@@ -166,13 +167,22 @@
 						</div>
 					</div>
 					<div class="contacts--e-mail">
-						<form action="#">
+						<form action="#" id="contactsForm">
 							<div class="contacts--e-mail-head">
-								<input type="text" placeholder='Name'>
-								<input type="text" placeholder='Email'>
+								<div class="contacts--e-mail-head-item">
+									<input type="text" name='name' placeholder='Name'>
+									<span id="name"></span>
+								</div>
+								<div class="contacts--e-mail-head-item">
+									<input type="text" name='email' placeholder='Email'>
+									<span id="email"></span>
+								</div>
 							</div>
 							<div class="contacts--e-mail-message">
-								<textarea placeholder="Message"></textarea>
+								<div class="contacts--e-mail-message-item">
+									<textarea name='message' placeholder="Message"></textarea>
+									<span id="message"></span>
+								</div>
 								<input type="submit" value='Send'>
 							</div>
 						</form>
@@ -181,5 +191,7 @@
 			</div>
 		</footer>
 	</div>
+	<script src='js/script.js'></script>
+
 </body>
 </html>
