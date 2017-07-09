@@ -16,7 +16,28 @@ var msg = {
 			},
 		errors = {};
 
+
+
+
 $(document).ready(function() {
+
+	// fixed menu on scroll
+
+	var $header = $('#header');
+
+	$(window).scroll(function() {
+
+		if ( $(this).scrollTop() > 20 && $header.hasClass('default') ) {
+
+			$header.removeClass('default').addClass('fixed');
+		} else if ( $(this).scrollTop() < 20 && $header.hasClass('fixed') ) {
+
+			$header.removeClass('fixed').addClass('default');
+		}
+	});
+
+
+	// hover on services
 
 	$('.services--item-btn').hover(
 
@@ -30,8 +51,7 @@ $(document).ready(function() {
 
 
 
-
-	// form
+	// validate form
 
 
 

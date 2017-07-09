@@ -65,7 +65,7 @@ input, select, button {
   min-height: 100%;
 }
 
-.wrapper header .wrap-header {
+.wrapper header #header {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -82,29 +82,45 @@ input, select, button {
       -ms-flex-align: center;
           align-items: center;
   height: 100px;
-  -ms-padding-top: 3%;
+  z-index: 999;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 
-.wrapper header .wrap-header .logo {
+.wrapper header #header.default {
+  width: 92%;
+}
+
+.wrapper header #header.fixed {
+  position: fixed;
+  top: 0;
+  width: 92%;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+.wrapper header .logo {
   -webkit-align-self: center;
       -ms-flex-item-align: center;
           align-self: center;
 }
 
-.wrapper header .wrap-header .logo a {
+.wrapper header .logo a {
   display: block;
   font-family: 'Lobster', cursive;
   font-size: 3.2em;
   color: #44c0c2;
 }
 
-.wrapper header .wrap-header nav {
+.wrapper header nav {
+  display: block;
   -webkit-align-self: center;
       -ms-flex-item-align: center;
           align-self: center;
 }
 
-.wrapper header .wrap-header nav .header-links {
+.wrapper header nav .header-links {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -120,15 +136,17 @@ input, select, button {
           flex-direction: row;
 }
 
-.wrapper header .wrap-header nav .header-links li a {
+.wrapper header nav .header-links li a {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.1em;
   padding: 39px 20px 36px;
 }
 
-.wrapper header .wrap-header nav .header-links li a:hover {
+.wrapper header nav .header-links li a:hover {
   background: #f8f9fb;
   border-bottom: 3px solid #49cbcd;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 
 .home-bg {
@@ -205,7 +223,7 @@ input, select, button {
 }
 
 .title {
-  padding: 8% 0;
+  padding: 10% 0;
   font-family: 'Open Sans', sans-serif;
   font-size: 3em;
   color: #4e525d;
@@ -248,6 +266,10 @@ input, select, button {
   background: #eeeef0;
   -webkit-border-radius: 50%;
           border-radius: 50%;
+}
+
+#team .team--wrap .team--wrap-item .team--wrap-item-photo:hover {
+  cursor: pointer;
 }
 
 #team .team--wrap .team--wrap-item .team--wrap-item-photo:hover .zoom {
@@ -541,7 +563,7 @@ input, select, button {
 }
 
 @media screen and (max-width: 768px) {
-  .wrapper header .wrap-header {
+  .wrapper header #header {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -554,15 +576,15 @@ input, select, button {
             justify-content: space-around;
     min-height: 100px;
   }
-  .wrapper header .wrap-header .logo {
+  .wrapper header #header .logo {
     padding-top: 3%;
   }
-  .wrapper header .wrap-header nav {
+  .wrapper header #header nav {
     display: block;
     padding: 3%;
   }
-  .wrapper header .wrap-header nav a {
-    padding: 13%;
+  .wrapper header #header nav a {
+    padding: 6px 15px 12px;
   }
   #services .services-wrap .services--item {
     margin-left: 0;
@@ -590,41 +612,49 @@ input, select, button {
 
 @media screen and (max-width: 520px) {
   body {
-    font-size: 65%;
+    font-size: 80%;
   }
-  .wrapper header .wrap-header {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .wrapper header #header {
     height: auto;
-    padding: 5%;
+    width: 100%;
     text-align: center;
   }
-  .wrapper header .wrap-header .logo {
+  .wrapper header #header.fixed {
+    height: auto;
+  }
+  .wrapper header #header.default {
+    width: 100%;
+  }
+  .wrapper header #header .logo {
+    width: 100%;
     font-size: 0.7em;
   }
-  .wrapper header .wrap-header nav .header-links {
+  .wrapper header #header nav {
+    width: 100%;
+  }
+  .wrapper header #header nav .header-links {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
   }
-  .wrapper header .wrap-header nav .header-links li {
-    padding-top: 17%;
+  .wrapper header #header nav .header-links li {
+    padding: 4%;
+    margin: 3px;
   }
-  .wrapper header .wrap-header nav .header-links li a {
-    padding: 7%;
+  .wrapper header #header nav .header-links li a {
+    padding: 4%;
   }
   #home .home--pointer-right {
     background: url(../img/right-pointer-small.png) no-repeat;
